@@ -7,6 +7,7 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 const port = 3000;
 
+//added static file to server
 app.use(express.static('public'));
 app.use(bodyParser.json());
 
