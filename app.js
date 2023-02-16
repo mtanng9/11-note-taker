@@ -7,10 +7,11 @@ const { v4: uuidv4 } = require('uuid');
 const app = express();
 const port = 3000;
 
+app.use(express.static('public'));
 app.use(bodyParser.json());
 
 app.get('/notes', (req, res) => {
-  res.sendFile(path.join(__dirname, '/public/notes.html'));
+  res.sendFile(__dirname + '/public/notes.html');
 })
 
 app.get('/api/notes', (req, res) => {
@@ -30,8 +31,8 @@ app.post('/api/notes', (req, res) => {
   console.log(myObject);
   //fs.writeFileSync('db.json',data);
   fs.writeFileSync("./db/db.json", JSON.stringify(myObject, null, 2));
-
   // send note back to client 
+  res.json(note);
 })
 
 // all scenerio - stays at bottom b/c how js read
