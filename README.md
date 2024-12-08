@@ -21,8 +21,6 @@ Clone repo locally, cd into root folder, use npm i, then use npm start.
 ## Usage
 Use to write and save notes. 
 
-![Screen Shot 2023-02-16 at 3 04 18 PM](https://user-images.githubusercontent.com/118089627/219475653-7b59fa98-baab-45b5-9fa3-6b110869e441.png)
-
 ## Questions
 
 [mtanng9](https://github.com/mtanng9)
